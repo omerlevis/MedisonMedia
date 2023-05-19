@@ -13,14 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/dashboard', [\App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard')->middleware(['auth']);
+
 Route::get('/', function () {
     return view('auth.login');
 })->middleware('guest');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::resource('countries', \App\Http\Controllers\CountryController::class);
 
+Route::get('edit-country/{id}',function ()
+{
+    return view('countries.edit-country');
+});
 
 
 require __DIR__.'/auth.php';

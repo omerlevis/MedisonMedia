@@ -13,6 +13,10 @@
         <!-- Scripts -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
+        <script src="{{ mix('/js/app.js') }}" preload ></script>
+
+
+
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">
@@ -31,5 +35,5 @@
             </main>
         </div>
     </body>
-    <script src="{{ mix('/js/app.js') }}"></script>
+
 </html>

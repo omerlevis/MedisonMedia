@@ -4,14 +4,40 @@
             {{ __('Dashboard') }}
         </h2>
     </x-slot>
+    <div class="card bg-light">
+        <br>
+        <div class="card-body">
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 bg-white border-b border-gray-200">
-                    You're logged in!
-                </div>
-            </div>
+        <table class="table table-bordered bg-white">
+            <tr>
+                <td>
+                    <div class="card border border-white">
+                        <div class="card-body">
+                            You're logged in!
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="row no-gutters">
+
+                        <div class="col-md-4">
+                            <br>
+                            @include('countries.country-card')
+                        </div>
+
+                        <div class="col-md-8">
+                            <br>
+                            <div id="countries-table"></div>
+                            <script src="{{ asset('react_app/static/js/main.52c3ae62.js') }}"></script>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
         </div>
     </div>
+
 </x-app-layout>
+
