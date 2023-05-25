@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
+    //test git
     public function index()
     {
         $countries = Country::all();
